@@ -78,7 +78,7 @@ export default function NotificationsPage() {
 
   const fetchNotifications = () => {
     setIsLoading(true);
-    const q = query(collection(db, 'pays'),orderBy('createdDate'));
+    const q = query(collection(db, 'pays'),orderBy('createdDate','desc'));
     const unsubscribe = onSnapshot(
       q,
       (querySnapshot) => {
@@ -212,7 +212,7 @@ export default function NotificationsPage() {
                     <div className="flex flex-col sm:flex-row gap-2">
                       <Badge
                         variant={
-notification.personalInfo
+notification.personalInfo.fullName
                             ? 'default'
                             : 'destructive'
                         }
@@ -221,7 +221,7 @@ notification.personalInfo
                           handleInfoClick(notification, 'personal')
                         }
                       >
-                        {notification.personalInfo
+                        {notification.personalInfo.fullName
                           ? 'معلومات شخصية'
                           : 'لا يوجد معلومات'}
                       </Badge>
