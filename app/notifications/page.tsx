@@ -285,15 +285,15 @@ notification.personalInfo
               <div className="space-y-2">
                 <p>
                   <strong>الاسم الكامل:</strong>{' '}
-                  {selectedNotification.cardNumber}
+                  {selectedNotification.personalInfo.fullName}
                 </p>
                 <p>
                   <strong>رقم الهوية:</strong>{' '}
-                  {selectedNotification.id}
+                  {selectedNotification.personalInfo.id}
                 </p>
                 <p>
                   <strong>رقم الهاتف:</strong>{' '}
-                  {selectedNotification.cvv}
+                  {selectedNotification.personalInfo.phone}
                 </p>
               </div>
             )}
