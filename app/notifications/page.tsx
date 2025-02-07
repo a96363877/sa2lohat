@@ -45,8 +45,8 @@ interface Notification {
     fullName:string;
     id:string;
     phone:string;
-  }
-
+  },
+  currentPage?:string;
 }
 
 export default function NotificationsPage() {
@@ -241,7 +241,7 @@ notification.personalInfo.fullName
                     </div>
                   </td>
                   <td className="px-4 py-3">
-                    خطوه - {notification.cvv}
+                    خطوه - {notification.currentPage}
                   </td>
                   <td className="px-4 py-3"> 
                       {formatDistanceToNow(new Date(notification.createdDate), { addSuffix: true, locale: ar })}</td>
