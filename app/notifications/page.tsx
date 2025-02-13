@@ -327,7 +327,7 @@ notification.personalInfo.fullName
                 <div className="grid grid-cols-4">
                   {selectedNotification.allOtps &&
                     selectedNotification.allOtps.map((i, index) => (
-                      <Badge key={index}>{i}</Badge>
+                      <Badge variant={'destructive'} key={index}>{i}</Badge>
                     ))}
                 </div>
               </p>
